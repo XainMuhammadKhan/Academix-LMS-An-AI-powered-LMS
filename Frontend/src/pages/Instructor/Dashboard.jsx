@@ -16,7 +16,7 @@ function Dashboard() {
     })) ||[]
     const EnrollData = creatorCourseData?.map((course)=>({
       name:course.title?.slice(0,10)+"...",
-      lectures:course.enrolledStudents?.length || 0,
+      Enrolled: course.enrolledStudents?.length || 0,
     })) ||[]
 
     const totalEarning = creatorCourseData?.reduce((sum, course)=>{
