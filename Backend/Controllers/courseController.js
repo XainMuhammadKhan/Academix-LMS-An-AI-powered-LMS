@@ -352,8 +352,8 @@ export const createCheckoutSession = async (req, res) => {
                     quantity: 1,
                 },
             ],
-            success_url: `${process.env.CLIENT_URL || 'http://localhost:5173'}/payment/success?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url: `${process.env.CLIENT_URL || 'http://localhost:5173'}/payment/failure?session_id={CHECKOUT_SESSION_ID}`,
+            success_url: `${'https://academix-lms-an-ai-powered-lms-1.onrender.com'}/payment/success?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${'https://academix-lms-an-ai-powered-lms-1.onrender.com'}/payment/failure?session_id={CHECKOUT_SESSION_ID}`,
             metadata: { courseId: String(courseId), userId: String(req.userId) },
         });
 
