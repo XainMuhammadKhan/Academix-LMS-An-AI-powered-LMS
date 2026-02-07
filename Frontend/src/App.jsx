@@ -13,7 +13,7 @@ import CreateCourses from './pages/Instructor/CreateCourses'
 import EditCourse from './pages/Instructor/EditCourse'
 import ForgetPassword from './pages/ForgetPassword' 
 
-export const serverURL = "http://localhost:8000";
+export const serverURL = "https://academix-lms-an-ai-powered-lms.onrender.com";
 import { ToastContainer } from 'react-toastify';
 import getCurrentUser from './customHooks/getCurrentUser'
 import { useSelector } from 'react-redux'
