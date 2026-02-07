@@ -6,7 +6,7 @@ import Landing from '../assets/landing.png'
 const PaymentSuccess = () => {
   const [status, setStatus] = useState('Verifying payment...')
   const location = useLocation();
-  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+  const API_BASE ='https://academix-lms-an-ai-powered-lms.onrender.com';
 
   useEffect(() => {
     const qs = new URLSearchParams(location.search);
