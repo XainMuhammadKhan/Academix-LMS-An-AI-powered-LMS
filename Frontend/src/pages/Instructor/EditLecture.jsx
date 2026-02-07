@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 import axios from 'axios'
 import { serverURL as serverUrl } from '../../App'
 import homenew from '../../assets/homenew.png'
-import { setlectureData } from '../../redux/LectureSlice'
+import { setlectureData } from '../../redux/lectureSlice'
 
 function EditLecture() {
   const {courseId, lectureId} = useParams();
