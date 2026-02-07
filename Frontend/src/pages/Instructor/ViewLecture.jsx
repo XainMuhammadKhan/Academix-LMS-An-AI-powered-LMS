@@ -7,7 +7,7 @@ import backdrop from '../../assets/landing.png'
 
 const ViewLecture = () => {
   const { courseId, lectureId } = useParams();
-  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+  const API_BASE = 'https://academix-lms-an-ai-powered-lms.onrender.com';
   const { userData } = useSelector(state => state.user);
   const [course, setCourse] = useState(null);
   const [lecture, setLecture] = useState(null);
