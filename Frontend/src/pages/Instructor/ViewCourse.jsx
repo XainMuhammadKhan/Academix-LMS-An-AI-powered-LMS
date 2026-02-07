@@ -18,7 +18,7 @@ function ViewCourse() {
   const { courseId } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+  const API_BASE ='https://academix-lms-an-ai-powered-lms.onrender.com';
   const [isEnrolled, setIsEnrolled] = useState(false);
   const [selectedLecture, setSelectedLecture] = useState(null);
   const [creatorData, setCreatorData] = useState(null);
