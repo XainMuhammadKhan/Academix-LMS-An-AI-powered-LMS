@@ -44,8 +44,8 @@ export const register = async (req, res) => {
     let token = await generateToken(user._id);
         res.cookie("token", token,{
             httpOnly: true,
-            secure: false,
-            sameSite: "strict",
+            secure: true,
+            sameSite: "none",
             maxAge:7*24*60*60*1000
         })
         return res.status(201).json({message: "User registered successfully", user: {id: user._id, name, email, role}, token});
@@ -86,8 +86,8 @@ export const login = async (req, res) => {
         
         res.cookie("token", token, {
             httpOnly: true,
-            secure: false,
-            sameSite: "strict",
+            secure: true,
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000
         });
         
@@ -230,7 +230,7 @@ export const googleAuthCallback = async (req, res) => {
 
         // Generate JWT token (await the promise so token is a string)
         const token = await generateToken(user._id);
-        res.cookie("token", token, { httpOnly: true , secure: false, sameSite: "strict", maxAge: 7 * 24 * 60 * 60 * 1000 });
+        res.cookie("token", token, { httpOnly: true , secure: true, sameSite: "none", maxAge: 7 * 24 * 60 * 60 * 1000 });
 
         return res.status(200).json({ message: "Google authentication successful", user });
     } catch (error) {
