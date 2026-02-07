@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 // Enable CORS for the frontend dev server and allow credentials (cookies)
-const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+const CLIENT_URL = "https://academix-lms-an-ai-powered-lms-1.onrender.com";
 app.use(
   cors({
     origin: CLIENT_URL,
