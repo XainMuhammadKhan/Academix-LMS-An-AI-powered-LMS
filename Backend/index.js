@@ -33,7 +33,7 @@ app.use(cookieParser());
 const CLIENT_URL = "https://academix-lms-an-ai-powered-lms-1.onrender.com";
 app.use(
   cors({
-    origin: CLIENT_URL,
+    origin: "https://academix-lms-an-ai-powered-lms-1.onrender.com",
     credentials: true,
   })
 );
